@@ -46,7 +46,7 @@ button:focus {
 }
 
 .col{
-    flex-row:1;
+    flex-grow:1;
     margin-right: 10px;
 }
 

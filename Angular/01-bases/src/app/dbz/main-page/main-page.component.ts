@@ -16,10 +16,6 @@ export class MainPageComponent {
   //   return this.dbzService.personajes;
   // }
 
-  // agregarNuevoPersonaje(argumento: Personaje) {
-  //   this.personajes.push(argumento);
-  // }
-
   constructor(public dbzService: DbzService){ //con esto se inicializa el servicio
   }
 }
