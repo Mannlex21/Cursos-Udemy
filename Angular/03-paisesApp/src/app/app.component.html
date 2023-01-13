@@ -1,35 +1,6 @@
 <div class="row container mt-4">
   <div class="col-4">
-    <h2>Busquedas</h2>
-    <hr />
-    <ul class="list-group">
-      <!-- [routerLinkActiveOptions]="{ exact: true }" solo verifica que el path
-      sea exacto // ya que para este ejemplo se usa el path /, pero si no se
-      pone el exact entonces // aceptaria cualquier path y estaria activo
-      siempre -->
-      <li
-        routerLink=""
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        class="list-group-item list-group-item-action user-select-none"
-      >
-        Buscar pais
-      </li>
-      <li
-        routerLink="/region"
-        routerLinkActive="active"
-        class="list-group-item list-group-item-action user-select-none"
-      >
-        Por region
-      </li>
-      <li
-        routerLink="/capital"
-        routerLinkActive="active"
-        class="list-group-item list-group-item-action user-select-none"
-      >
-        Por capital
-      </li>
-    </ul>
+    <app-sidebar></app-sidebar>
   </div>
 
   <div class="col">
