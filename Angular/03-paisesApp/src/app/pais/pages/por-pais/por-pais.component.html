@@ -1,23 +1,40 @@
-<h2>Por pais</h2>
-<hr />
+<div class="animate__animated animate__fadeIn animate__faster">
+  <h2>Por pais</h2>
+  <hr />
 
-<div class="row">
-  <div class="col">
-    <app-pais-input
-      (onEnter)="buscar($event)"
-      (onDebounce)="sugerencias($event)"
-      placeholder="Buscar por pais"
-    ></app-pais-input>
+  <div class="row">
+    <div class="col">
+      <app-pais-input
+        (onEnter)="buscar($event)"
+        (onDebounce)="sugerencias($event)"
+        placeholder="Buscar por pais"
+      ></app-pais-input>
+    </div>
   </div>
-</div>
 
-<hr />
-<div *ngIf="hayError" class="alert alert-danger">
-  No se encontro nada con el termino {{ termino | uppercase }}
-</div>
+  <ul *ngIf="mostrarSugerencias" class="list-group">
+    <li
+      *ngFor="let item of paisesSugeridos"
+      class="list-group-item list-group-item-action"
+      role="button"
+    >
+      <a class="nav-link" [routerLink]="['/pais', item.alpha2Code]">{{
+        item.name
+      }}</a>
+    </li>
+    <li class="list-group-item list-group-item-action" role="button">
+      <a class="nav-link" (click)="buscar(termino)">Buscar "{{ termino }}" </a>
+    </li>
+  </ul>
 
-<div *ngIf="paises.length > 0" class="row">
-  <div class="col">
-    <app-pais-tabla [paises]="paises"></app-pais-tabla>
+  <hr />
+  <div *ngIf="hayError" class="alert alert-danger">
+    No se encontro nada con el termino {{ termino | uppercase }}
+  </div>
+
+  <div *ngIf="paises.length > 0" class="row">
+    <div class="col">
+      <app-pais-tabla [paises]="paises"></app-pais-tabla>
+    </div>
   </div>
 </div>
