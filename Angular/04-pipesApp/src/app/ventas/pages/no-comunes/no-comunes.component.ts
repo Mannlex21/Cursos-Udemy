@@ -4,4 +4,12 @@ import { Component } from '@angular/core';
   selector: 'app-no-comunes',
   templateUrl: './no-comunes.component.html',
 })
-export class NoComunesComponent {}
+export class NoComunesComponent {
+  nombre: string = 'Manuel';
+  genero: string = 'masculino';
+
+  invitacionMapa = {
+    masculino: 'invitarlo',
+    femenino: 'invitarla',
+  };
+}

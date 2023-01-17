@@ -1,1 +1,21 @@
-<p>no-comunes works!</p>
+<div class="text-layout">
+  <h1>Pipes no tan comunes</h1>
+  <p>Pipes incluidos en Angular - Usualmente en el Common modules</p>
+</div>
+
+<div class="grid">
+  <div class="col md:col-6 sm:col-12 col-12">
+    <p-fieldset legend="i18nSelect Pipe" [toggleable]="true">
+      Saludos {{ nombre }}, es un placer
+      {{ genero | i18nSelect : invitacionMapa }} a nuestro evento.
+    </p-fieldset>
+  </div>
+  <div class="col md:col-6 sm:col-12 col-12">
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+      voluptatibus porro doloremque sequi deleniti est tempora earum hic quia
+      consectetur, molestiae recusandae excepturi ex, facilis voluptatum aliquid
+      reiciendis a
+    </p-fieldset>
+  </div>
+</div>
