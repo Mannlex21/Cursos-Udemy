@@ -12,10 +12,8 @@
   </div>
   <div class="col md:col-6 sm:col-12 col-12">
     <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
-      voluptatibus porro doloremque sequi deleniti est tempora earum hic quia
-      consectetur, molestiae recusandae excepturi ex, facilis voluptatum aliquid
-      reiciendis a
+      Actualmente
+      {{ clientes.length | i18nPlural : clientesMapa }} esperando.
     </p-fieldset>
   </div>
 </div>
