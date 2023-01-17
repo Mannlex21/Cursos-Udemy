@@ -4,4 +4,10 @@ import { Component } from '@angular/core';
   selector: 'app-basicos',
   templateUrl: './basicos.component.html',
 })
-export class BasicosComponent {}
+export class BasicosComponent {
+  nombreLower: string = 'fernando';
+  nombreUpper: string = 'fFERNANDO';
+  nombreCompleto: string = 'maNuel muRillo';
+
+  fecha: Date = new Date();
+}
