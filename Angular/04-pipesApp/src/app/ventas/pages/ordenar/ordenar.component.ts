@@ -7,6 +7,7 @@ import { Color, Heroe } from '../../interfaces/ventas.interfaces';
   templateUrl: './ordenar.component.html',
 })
 export class OrdenarComponent {
+  ordenarPor: string = 'sin valor';
   esMayusculas: boolean = true;
   items: MenuItem[] = [];
   heroes: Heroe[] = [
