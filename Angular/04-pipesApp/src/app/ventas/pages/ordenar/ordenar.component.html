@@ -30,7 +30,7 @@
   </div>
 </p-toolbar>
 
-<p-table [value]="heroes">
+<p-table [value]="heroes | ordenar">
   <ng-template pTemplate="header">
     <tr>
       <th>Nombre</th>
