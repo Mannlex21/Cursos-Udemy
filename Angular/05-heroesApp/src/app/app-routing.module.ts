@@ -3,6 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
 
 const routes: Routes = [
+  {
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule), //lazy load
+  },
+  {
+    path: 'heroes',
+    loadChildren: () =>
+      import('./heroes/heroes.module').then((m) => m.HeroesModule), //lazy load
+  },
   { path: '404', component: ErrorPageComponent },
   { path: '**', redirectTo: '404' },
 ];
