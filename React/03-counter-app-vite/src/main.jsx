@@ -1,12 +1,10 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { FirstApp } from "./FirstApp";
+import "./style.css";
 
-const App = () => {
-    return (<h1>Hola mundo!!</h1>);
-}
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-    <React.StrictMode>
-        <App></App>
-    </React.StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+	<React.StrictMode>
+		<FirstApp title={"Adios mundo!"} subTitle={123}></FirstApp>
+	</React.StrictMode>
 );
