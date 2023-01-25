@@ -6,21 +6,7 @@ describe("Pruebas en <FirstApp></FirstApp>", () => {
 		const title = "Hola soy mannlex!";
 		const { container } = render(<FirstApp title={title}></FirstApp>);
 
-		expect(container).toMatchInlineSnapshot(`
-<div>
-  <h1
-    data-testid="test-title"
-  >
-    Hola soy mannlex!
-  </h1>
-  <p>
-    1
-  </p>
-  <p>
-    Mannlex
-  </p>
-</div>
-`);
+		expect(container).toMatchSnapshot();
 	});
 
 	test("debe de mostrar el titulo en un h1", () => {
@@ -31,5 +17,15 @@ describe("Pruebas en <FirstApp></FirstApp>", () => {
 
 		expect(getByText(title)).toBeTruthy();
 		expect(getByTestId("test-title").innerHTML).toContain(title);
+	});
+
+	test("debe de mostrar el subtitulo enviado por props", () => {
+		const title = "Hola soy mannlex!";
+		const subtitle = "Soy un subtituto";
+		const { getAllByText } = render(
+			<FirstApp title={title} subTitle={subtitle}></FirstApp>
+		);
+
+		expect(getAllByText(subtitle).length).toBe(2);
 	});
 });

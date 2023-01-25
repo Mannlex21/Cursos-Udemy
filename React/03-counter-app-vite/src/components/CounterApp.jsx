@@ -21,7 +21,12 @@ const CounterApp = ({ value }) => {
 
 			<button onClick={() => handlerCounter(counter + 1)}>+1</button>
 			<button onClick={() => handlerCounter(counter - 1)}>-1</button>
-			<button onClick={() => handlerCounter(value)}>reset</button>
+			<button
+				aria-label="btn-reset"
+				onClick={() => handlerCounter(value)}
+			>
+				reset
+			</button>
 		</>
 	);
 };
