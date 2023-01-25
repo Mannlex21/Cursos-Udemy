@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-export const FirstApp = ({ title, subTitle }) => {
+export const FirstApp = ({ title, subTitle, name }) => {
 	return (
 		<>
-			<h1>{title}</h1>
+			<h1 data-testid="test-title">{title}</h1>
 			<p>{subTitle + 1}</p>
+			<p>{name}</p>
 		</>
 	);
 };
@@ -18,6 +19,7 @@ FirstApp.propTypes = {
 
 //Con esto se agregan valores por defecto, incluso crea el prop en caso de no tenerlo inicializado
 FirstApp.defaultProps = {
-	title: "No hay titulo",
+	// title: "No hay titulo",
 	subTitle: 0,
+	name: "Mannlex",
 };
