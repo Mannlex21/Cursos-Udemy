@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-export const AddCategory = ({ setCategories }) => {
+// setCategories prop
+export const AddCategory = ({ onNewCategory }) => {
 	const [inputValue, setInputValue] = useState("");
 
 	//Se destructura los props { target: { value } } = event.target.value
@@ -12,8 +13,9 @@ export const AddCategory = ({ setCategories }) => {
 		event.preventDefault();
 		if (inputValue.trim().length <= 1) return;
 
-		setCategories((cat) => [...cat, inputValue]);
+		// setCategories((cat) => [...cat, inputValue]);
 		setInputValue("");
+		onNewCategory(inputValue.trim());
 	};
 
 	return (
